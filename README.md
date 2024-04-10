@@ -29,3 +29,6 @@ npx expo login
 ## Bundler Polyfill Issues - React Native Metro
 
 The setup follows instructions by [web3auth](https://web3auth.io/) in [this](https://web3auth.io/docs/troubleshooting/metro-issues) blog to resolve issues between `ethers.js` and the Metro bundler. The `metro.config.js` file is used to resolve the issues with Metro bundler with polfills made in `globals.js`.
+
+
+Also note the import of `@ethersproject/shims` before `@0xsequence/waas` to ensure that subsequent imports of `ethers.js` are correctly polyfilled.
